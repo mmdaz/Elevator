@@ -76,14 +76,14 @@ module Test;
         in = star;
         #20
         in = zero;
-        #15
+        #20
         in = zero;
         #20
         in = two;
 		  
         // End of test one we shall be in start state
         // Second test check whether the first user can use the Elevator
-        #50
+        #100
         in = star;
         #20
         in = zero;
@@ -91,9 +91,36 @@ module Test;
         in = zero;
         #20
         in = one; // We have logged in
+        #100 // until the result came
+        in = star;
+        #20// We are going to check admin's operations
+        in = one;
         #20
+        in = one;
+        #20
+        in = one;
+        #20
+        in = one;
+        #100 // End of first admin password
         in = star;
         #20
+        in = hash;
+        #20
+        in = star;
+        #20// Getting the second username
+        in = zero;
+        #20 
+        in = hash;// A wrong value
+        #100//Wait a bit longer
+        in = zero;
+        #20
+        in = one;
+        #50// End of second username Wait a bit for the result
+        in =  
+        
+
+        
+        #20//End of admin operation's tests
         in = hash;
         #20
         in = star;

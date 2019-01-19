@@ -151,7 +151,6 @@ module manager(in,
 					if(cs)
 						begin
 							if(state == check_main_username) begin
-                                    $display("%b is lock_out",lock_out);
 									if(lock_out == 0)state = user_exists;
 									else state = start;// The username isn't exist so we should go to start state
 								end
@@ -197,7 +196,7 @@ module manager(in,
 								end
 							end
 							else if(state == check_password) begin
-								if(pass_out == saved_password)begin
+								if(pass_out == pass_in)begin
 									state = reset_saved_counter;
 								end
 								else begin
@@ -206,16 +205,16 @@ module manager(in,
 										state = getting_password_1;
 									end
 									else begin // The user should be locked
-										addr = saved_username;
 										lock_in = 1;
+										cs = 1;
                                         prev_state = locking_user;
-                                        state = warming_ram_up;
 									end
 								end
 						end
 							else if(state == reset_saved_counter)begin
 								if(in == star)begin
 									count_rw = 0;
+									cs = 0;
 									state = getting_hash_for_the_last_time;
 								end
 							end
@@ -275,19 +274,18 @@ module manager(in,
 								else
 									state = start;
 							end
-							else if(state == user_exists)
+							else if(state == user_exists)begin
 								if(in == star) state = star_after_user_exist;
-							else if(state == star_after_user_exist)
-								begin
-									if(in == hash)
-										state = waiting_for_star;
-									else if(in <= valid_numbers)
-                    					begin
-											prev_state = state;
-                                            state = warming_ram_up;
-											addr = saved_username;
-										end
+							end
+							else if(state == star_after_user_exist)begin
+								if(in == hash)
+									state = waiting_for_star;
+								else if(in <= valid_numbers)begin // TODO: I didn't have looked at this part
+									prev_state = state;
+                                    state = warming_ram_up;
+									addr = saved_username;
 								end
+							end
 
 							// Admin operations code begins here
 							else if(state == admin_password_1)
@@ -525,7 +523,7 @@ module manager(in,
 							end
 							else if(state == getting_password_1)begin
 								if(in <= valid_numbers)begin
-									saved_password[15:12] = in;
+									pass_in[15:12] = in;
 									state = getting_password_2;
 								end
 								else begin
@@ -535,7 +533,7 @@ module manager(in,
 							end
 							else if(state == getting_password_2) begin
 								if(in <= valid_numbers)begin
-									saved_password[11:8] = in;
+									pass_in[11:8] = in;
 									state = getting_password_3;
 								end
 								else begin
@@ -545,7 +543,7 @@ module manager(in,
 							end
 							else if(state == getting_password_3) begin
 								if(in <= valid_numbers)begin
-									saved_password[7:4] = in;
+									pass_in[7:4] = in;
 									state = getting_password_4;
 								end
 								else begin
@@ -555,7 +553,7 @@ module manager(in,
 							end
 							else if(state == getting_password_4)begin
 								if(in <= valid_numbers)begin
-									saved_password[3:0] = in;
+									pass_in[3:0] = in;
 									state = check_password;
 								end
 								else begin
@@ -564,15 +562,11 @@ module manager(in,
 								end
 							end
 							else if(state == check_password)begin
-								prev_state = state;
-                                state = warming_ram_up;
-								addr = saved_username;
 								pass_rw = 0;
+								cs = 1;
 							end
 							else if(state == reset_saved_counter)begin
-								prev_state = state;
-                                state = warming_ram_up;
-								addr = saved_username;
+								cs = 1;
 								count_rw = 1;
 								count_in = 0000;
 							end
