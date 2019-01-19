@@ -1,0 +1,71 @@
+                parameter
+                start 		            							= 8'b00000000,
+				star_after_start									= 8'b00000001,// odd
+				main_username_1										= 8'b00000010,
+				main_username_2										= 8'b00000011,
+				main_username_3										= 8'b00000100,
+				check_main_username									= 8'b00000101,
+				wait_for_star_after_main_username 				= 8'b00000110,
+				star_after_main_username							= 8'b00001001,
+				user_exists												= 8'b00001010,
+				star_after_user_exist								= 8'b00001011,
+				admin_password_1										= 8'b00001100,
+				admin_password_2										= 8'b00001101,
+				admin_password_3										= 8'b00001110,
+				admin_password_4										= 8'b00001111,
+				check_admin_password									= 8'b00010000,
+				wait_for_star_after_admin_login					= 8'b00010001,
+				wait_for_hash_after_admin_login 					= 8'b00010010,
+				wait_again_for_star_after_admin_login			= 8'b00010011,
+				get_second_username_1								= 8'b00010100,
+				get_second_username_2								= 8'b00010101,
+				get_second_username_3								= 8'b00010110,
+				check_if_the_second_username_was_admin			= 8'b00010111,
+				the_second_username_was_admin         			= 8'b00011000,
+				the_second_username_was_not_admin				= 8'b00011001,
+				getting_new_admin_username_1						= 8'b00011010,
+				getting_new_admin_username_2						= 8'b00011011,
+				getting_new_admin_username_3						= 8'b00011100,
+				waiting_for_star_to_add								= 8'b00011101,
+				checking_new_admin_username						= 8'b00011110,
+				admin_changed_waiting_for_hash 					= 8'b00011111,
+				admin_changed_waiting_for_another_hash 		= 8'b00100000,
+				waiting_for_a_hash_to_remove						= 8'b00100001,
+
+			//New username adding or locking out states
+				getting_the_new_user_password_1					= 8'b00100010,
+				getting_the_new_user_password_2					= 8'b00100011,
+				getting_the_new_user_password_3					= 8'b00100100,
+				getting_the_new_user_password_4					= 8'b00100101,
+				waiting_for_a_star_to_add							= 8'b00100110,
+				waiting_for_hash_to_add								= 8'b00100111,
+
+			//Removing user states
+				waiting_for_a_star_to_remove						= 8'b00101000,
+				waiting_for_hash_to_remove							= 8'b00101001,
+
+		// Admin operations ENDED
+		// Typical user operations BEGINS
+				waiting_for_star 										= 8'b00101010,
+				waiting_for_star_after_hash						= 8'b00101011,
+				getting_password_1 									= 8'b00101100,
+				getting_password_2 									= 8'b00101101,
+				getting_password_3 									= 8'b00101110,
+				getting_password_4 									= 8'b00101111,
+				check_password 										= 8'b00110000,
+				locking_user											= 8'b00110001,
+				getting_star_for_the_last_time					= 8'b00110010,
+				getting_hash_for_the_last_time					= 8'b00110011,
+				reset_saved_counter									= 8'b00110100,
+
+				warming_ram_up                               = 8'b11111100,
+				password_alarm											= 8'b11111101,
+				waiting 													= 8'b11111110,
+				alarm														= 8'b11111111;
+
+
+	parameter star = 4'b1010,hash = 4'b1011;
+	parameter valid_numbers  = 4'b1001;
+	parameter max_username = 12'b000100101000,min_username = 12'b000000000000;
+	parameter max_number_of_errors = 4'b0011;
+	parameter waiting_time = 4'b0101;

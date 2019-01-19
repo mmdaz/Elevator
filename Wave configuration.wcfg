@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/Projects/Logic/phase_2/Test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Test" />
+            <top_module name="glbl" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="41" />
+   <wvobject fp_name="/Test/cs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cs</obj_property>
+      <obj_property name="ObjectShortName">cs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/pass_rw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pass_rw</obj_property>
+      <obj_property name="ObjectShortName">pass_rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/admin_rw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">admin_rw</obj_property>
+      <obj_property name="ObjectShortName">admin_rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/lock_rw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lock_rw</obj_property>
+      <obj_property name="ObjectShortName">lock_rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/count_rw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">count_rw</obj_property>
+      <obj_property name="ObjectShortName">count_rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/ram_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_rst</obj_property>
+      <obj_property name="ObjectShortName">ram_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/admin_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">admin_in</obj_property>
+      <obj_property name="ObjectShortName">admin_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/lock_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lock_in</obj_property>
+      <obj_property name="ObjectShortName">lock_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/admin_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">admin_out</obj_property>
+      <obj_property name="ObjectShortName">admin_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/lock_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lock_out</obj_property>
+      <obj_property name="ObjectShortName">lock_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/result_of_comparison" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">result_of_comparison</obj_property>
+      <obj_property name="ObjectShortName">result_of_comparison</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/rst_timer" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst_timer</obj_property>
+      <obj_property name="ObjectShortName">rst_timer</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/direction" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">direction</obj_property>
+      <obj_property name="ObjectShortName">direction</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[12:1]</obj_property>
+      <obj_property name="ObjectShortName">addr[12:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/saved_username" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">saved_username[12:1]</obj_property>
+      <obj_property name="ObjectShortName">saved_username[12:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/pass_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pass_in[16:1]</obj_property>
+      <obj_property name="ObjectShortName">pass_in[16:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/pass_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pass_out[16:1]</obj_property>
+      <obj_property name="ObjectShortName">pass_out[16:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/saved_password" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">saved_password[16:1]</obj_property>
+      <obj_property name="ObjectShortName">saved_password[16:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/comp1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">comp1[16:1]</obj_property>
+      <obj_property name="ObjectShortName">comp1[16:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/comp2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">comp2[16:1]</obj_property>
+      <obj_property name="ObjectShortName">comp2[16:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/count_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count_in[4:1]</obj_property>
+      <obj_property name="ObjectShortName">count_in[4:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/count_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count_out[4:1]</obj_property>
+      <obj_property name="ObjectShortName">count_out[4:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/period" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">period[4:1]</obj_property>
+      <obj_property name="ObjectShortName">period[4:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter[4:1]</obj_property>
+      <obj_property name="ObjectShortName">counter[4:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/prev_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">prev_state[8:1]</obj_property>
+      <obj_property name="ObjectShortName">prev_state[8:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[8:1]</obj_property>
+      <obj_property name="ObjectShortName">state[8:1]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in[4:1]</obj_property>
+      <obj_property name="ObjectShortName">in[4:1]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/zero" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">zero[3:0]</obj_property>
+      <obj_property name="ObjectShortName">zero[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/one" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">one[3:0]</obj_property>
+      <obj_property name="ObjectShortName">one[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/two" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">two[3:0]</obj_property>
+      <obj_property name="ObjectShortName">two[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/three" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">three[3:0]</obj_property>
+      <obj_property name="ObjectShortName">three[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/four" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">four[3:0]</obj_property>
+      <obj_property name="ObjectShortName">four[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/five" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">five[3:0]</obj_property>
+      <obj_property name="ObjectShortName">five[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/six" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">six[3:0]</obj_property>
+      <obj_property name="ObjectShortName">six[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/seven" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">seven[3:0]</obj_property>
+      <obj_property name="ObjectShortName">seven[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/eight" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">eight[3:0]</obj_property>
+      <obj_property name="ObjectShortName">eight[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/nine" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nine[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nine[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/star" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">star[3:0]</obj_property>
+      <obj_property name="ObjectShortName">star[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/hash" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">hash[3:0]</obj_property>
+      <obj_property name="ObjectShortName">hash[3:0]</obj_property>
+   </wvobject>
+</wave_config>
