@@ -22,15 +22,11 @@ module Test;
 	reg [3:0] in;
 	wire enable;
 	reg clk,rst;
-	wire cs,pass_rw,admin_rw,lock_rw,count_rw,ram_rst,admin_in,lock_in,admin_out,lock_out;
+	wire cs,pass_rw,admin_rw,lock_rw,count_rw,ram_rst,admin_in,lock_in,admin_out,lock_out,result_of_comparison,rst_timer,direction;
 	wire [11:0]addr,saved_username;
-	wire [15:0] pass_in,pass_out,saved_password;
-	wire [3:0] count_in,count_out;
+	wire [15:0] pass_in,pass_out,saved_password,comp1,comp2;
+	wire [3:0] count_in,count_out,period,counter;
 	wire [7:0] state,prev_state;
-	wire rst_timer,direction;
-	wire [3:0] period;
-	wire comp1,comp2,result_of_comparison;
-	wire[3:0] counter; 
 	
 	
     parameter
@@ -48,24 +44,18 @@ module Test;
             hash         = 4'b1011;
 
 				
-//manager smple(in,
-//            state,prev_state,saved_username,saved_password,
-//            cs, pass_rw, admin_rw, lock_rw, count_rw,ram_rst,addr,pass_in,count_in,admin_in,lock_in,pass_out,count_out,admin_out,lock_out,
-//            ,clk,rst);
-				
 manager smpl(in,
-		state,prev_state,saved_username,saved_password,
-		cs, pass_rw, admin_rw, lock_rw, count_rw,ram_rst,addr,pass_in,count_in,admin_in,lock_in,pass_out,count_out,admin_out,lock_out,
-		rst_timer,direction,period,
-		comp1,comp2,result_of_comparison,
-		counter,
-		clk,rst);
-
+				state,prev_state,saved_username,saved_password,
+				cs, pass_rw, admin_rw, lock_rw, count_rw,ram_rst,addr,pass_in,count_in,admin_in,lock_in,pass_out,count_out,admin_out,lock_out,
+				rst_timer,direction,period,
+				comp1,comp2,result_of_comparison,
+				counter,
+				clk,rst);
 				
 	initial 
 		begin
 			clk = 1'b0;
-			repeat (30000)
+			repeat (60000)
 			#10 clk = ~clk;
 	end 
 	
@@ -86,6 +76,9 @@ manager smpl(in,
         #20
         in = two;
 		#100 // wait for the result
+
+        // 250 ns
+
         // End of test one we shall be in start state
         // Second We are going to check admin's operations
         in = star;
@@ -94,8 +87,9 @@ manager smpl(in,
         #20
         in = zero;
         #20
-        in = one; // We have logged in
-        #100 // until the result came
+        in = one; // We have logged in 
+        #100 // until the result came 
+        // 416 ns
         in = star;
         #20// We are going to check admin's operations
         in = one;
@@ -106,6 +100,7 @@ manager smpl(in,
         #20
         in = one;
         #100 // End of first admin password
+        // 590 ns
         in = star;
         #20
         in = hash;
@@ -115,11 +110,27 @@ manager smpl(in,
         in = zero;
         #20 
         in = hash;// A wrong value
-        #100//Wait a bit longer
+        #140//Wait a bit longer
+        //FIXME: 750ns
         in = zero;
         #20
         in = one;
-        #50// End of second username Wait a bit for the result
+        #140// End of second username Wait a bit for the result
+        in = hash; //Going to add a new user
+        #20
+        in = one;
+        #20
+        in = one;
+        #20
+        in = one;
+        #20
+        in = zero;
+        #20
+        in = star;
+        #60//FIXME: 1,180 ns
+        in = hash;
+        #20// new user added
+
         in = star; // Going to change admin
         #20
         in = one;

@@ -130,7 +130,6 @@ module manager(in,
 	// The comparator gate
 	output reg comp1,comp2;
 	output wire result_of_comparison;
-	comparator Comparator(comp1,comp2,result_of_comparison);
 
 	output reg [3:0] counter; // This is used to count number of times that user have had error in password input
 
@@ -575,11 +574,11 @@ module manager(in,
 							// End of user operations
 
 							// Special states
-							else if(state == password_alarm)begin
+							else if(state == password_alarm)begin //TODO: I haven't done this part completely
                                 // state = waiting;
 								// count_rw = 1;
 								// count_in = counter;
-								// addr = saved_username;
+								// addr = saved_username; 
 							end
 
 							else if(state == waiting)begin
