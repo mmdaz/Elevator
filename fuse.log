@@ -7,15 +7,14 @@ Analyzing Verilog file "F:/Projects/Logic/phase_2/timer.v" into library work
 Analyzing Verilog file "F:/Projects/Logic/phase_2/ram.v" into library work
 Analyzing Verilog file "F:/Projects/Logic/phase_2/comparator.v" into library work
 Analyzing Verilog file "F:/Projects/Logic/phase_2/manager.v" into library work
-WARNING:HDLCompiler:370 - "F:/Projects/Logic/phase_2/manager.v" Line 24: Empty port in module declaration
 Analyzing Verilog file "F:/Projects/Logic/phase_2/test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Parsing VHDL file "F:/Projects/Logic/phase_2/RAM.vhd" into library work
 Parsing VHDL file "F:/Projects/Logic/phase_2/counter.vhd" into library work
 Parsing VHDL file "F:/Projects/Logic/phase_2/compare.vhd" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "F:/Projects/Logic/phase_2/manager.v" Line 126: Size mismatch in connection of port <period>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "F:/Projects/Logic/phase_2/manager.v" Line 131: Size mismatch in connection of port <comp1>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "F:/Projects/Logic/phase_2/manager.v" Line 133: Size mismatch in connection of port <comp1>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1007 - "F:/Projects/Logic/phase_2/manager.v" Line 458: Element index 15 into addr is out of bounds
 Completed static elaboration
 Compiling module ram
 Compiling module timer
@@ -31,9 +30,9 @@ Compiling architecture rtl of entity SYNCSRAM [syncsram_default]
 Compiling architecture behavioral of entity counter [counter_default]
 Compiling architecture rtl of entity compare [\compare(4)\]
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 10 VHDL Units
 Compiled 6 Verilog Units
 Built simulation executable F:/Projects/Logic/phase_2/Test_isim_beh.exe
-Fuse Memory Usage: 36404 KB
-Fuse CPU Usage: 546 ms
+Fuse Memory Usage: 36444 KB
+Fuse CPU Usage: 577 ms
